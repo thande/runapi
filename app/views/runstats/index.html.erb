@@ -1,0 +1,29 @@
+<h1>Listing runstats</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Location</th>
+      <th>User</th>
+      <th>Time</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @runstats.each do |runstat| %>
+      <tr>
+        <td><%= runstat.location %></td>
+        <td><%= runstat.user %></td>
+        <td><%= runstat.time %></td>
+        <td><%= link_to 'Show', runstat %></td>
+        <td><%= link_to 'Edit', edit_runstat_path(runstat) %></td>
+        <td><%= link_to 'Destroy', runstat, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Runstat', new_runstat_path %>

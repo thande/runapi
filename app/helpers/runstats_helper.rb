@@ -1,0 +1,2 @@
+module RunstatsHelper
+end

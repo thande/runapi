@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @runstat.location %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @runstat.user %>
+</p>
+
+<p>
+  <strong>Time:</strong>
+  <%= @runstat.time %>
+</p>
+
+<%= link_to 'Edit', edit_runstat_path(@runstat) %> |
+<%= link_to 'Back', runstats_path %>
